@@ -1,5 +1,14 @@
 ---
  title: "WISDOM Project - XXVII. Giant molecular clouds of the lenticular galaxy NGC 1387: similarities with spiral galaxy clouds"
+
+ display_title: "Giant molecular clouds of the lenticular galaxy NGC 1387: similarities with spiral galaxy clouds"
+ wisdom_number: "XXVII"
+ authors_short: "Liang et al."
+ year: 2026
+ journal: "MNRAS"
+ volume: "547"
+ publication_ref: "stag221"
+ 
  excerpt: "Fu-Heng Liang, et al. (2026), MNRAS, 547, 4, stag221"
  categories:
   - News
