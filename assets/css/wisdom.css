@@ -2,17 +2,23 @@
    WISDOM desktop navigation
    ========================================= */
 
-/* Desktop navigation links */
 .desktop-navigation {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+
+  height: 100%;
+
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 42px;
 }
 
 .desktop-navigation a {
   font-family: "Fira Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
+
   color: #181c22;
   text-decoration: none;
 }
@@ -22,16 +28,42 @@
   text-decoration: none;
 }
 
-/* Hide the hamburger on desktop */
+
+/* Desktop */
 @media (min-width: 701px) {
+
+  .sidebar-toggle-wrapper {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .desktop-navigation {
+    pointer-events: auto;
+  }
+
   .navicon-button {
     display: none !important;
   }
+
+  /*
+     Keep the existing WISDOM masthead at the top
+     of the browser while the page scrolls.
+  */
+  .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+  }
 }
 
-/* Keep the normal hamburger on smaller screens */
+
+/* Mobile */
 @media (max-width: 700px) {
+
   .desktop-navigation {
     display: none;
   }
+
 }
