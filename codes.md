@@ -1,5 +1,5 @@
 ---
-title: Code
+title: Software
 layout: code
 permalink: /codes/
 collection: codes
