@@ -71,7 +71,8 @@
 
 /* Give homepage content more horizontal space */
 .layout--home .index.inner {
-  max-width: 1400px;
+  max-width: none;
+  width: 100%;
 }
 
 /* Latest publications */
