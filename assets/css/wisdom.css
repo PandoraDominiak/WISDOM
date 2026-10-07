@@ -90,3 +90,34 @@
     min-width: 0;
   }
 }
+
+
+
+/* Publication card typography */
+
+.publication-card .publication-number {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.publication-card .entry-title {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.publication-card .publication-meta {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.publication-card .publication-meta p {
+  margin-bottom: 1.25rem;
+}
+
+.publication-card .more-link {
+  font-size: 1rem;
+  font-weight: 600;
+}
