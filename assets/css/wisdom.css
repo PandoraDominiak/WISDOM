@@ -1,111 +1,37 @@
 /* =========================================
-   WISDOM fixed navigation
+   WISDOM desktop navigation
    ========================================= */
 
-/* Hide the original Basically Basic navigation/masthead */
-.menu-toggle,
-.site-nav,
-.off-canvas {
-  display: none !important;
-}
-
-/* Our navigation bar */
-.wisdom-masthead {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 64px;
-
-  z-index: 9999;
-
-  background: #ffffff;
-  border-bottom: 1px solid #dddddd;
-}
-
-/* Contents of navigation bar */
-.wisdom-masthead__inner {
-  max-width: 1240px;
-  height: 64px;
-  margin: 0 auto;
-  padding: 0 28px;
-
+/* Desktop navigation links */
+.desktop-navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 32px;
 }
 
-/* Logo + WISDOM */
-.wisdom-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  color: #222222;
-  text-decoration: none;
-}
-
-.wisdom-brand:hover {
-  color: #222222;
-  text-decoration: none;
-}
-
-/* Keep the original logo proportions */
-.wisdom-brand__logo {
-  display: block;
-  width: 42px;
-  height: 42px;
-
-  object-fit: contain;
-  border-radius: 50%;
-}
-
-/* WISDOM wordmark */
-.wisdom-brand__name {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-/* Navigation links */
-.wisdom-nav {
-  display: flex;
-  align-items: center;
-  gap: 34px;
-}
-
-.wisdom-nav a {
+.desktop-navigation a {
   font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-
-  color: #333333;
+  color: #181c22;
   text-decoration: none;
 }
 
-.wisdom-nav a:hover {
+.desktop-navigation a:hover {
   color: #000000;
   text-decoration: none;
 }
 
-/*
-   The fixed navigation is 64px tall.
-   Push the actual website down exactly 64px so that
-   the banner begins immediately below the navigation.
-*/
-body {
-  padding-top: 64px !important;
+/* Hide the hamburger on desktop */
+@media (min-width: 701px) {
+  .navicon-button {
+    display: none !important;
+  }
 }
 
-/* Mobile will be redesigned separately */
+/* Keep the normal hamburger on smaller screens */
 @media (max-width: 700px) {
-  .wisdom-nav {
-    gap: 14px;
-  }
-
-  .wisdom-nav a {
-    font-size: 0.85rem;
+  .desktop-navigation {
+    display: none;
   }
 }
