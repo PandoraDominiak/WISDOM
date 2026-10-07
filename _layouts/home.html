@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include page-intro.html %}
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="index inner">
+    <div>{{ content }}</div>
+
+    <div>
+      <header class="section-title">
+        <h2>Latest Publications</h2>
+      </header>
+
+      <div class="entries-list">
+        {% assign paper_posts = site.posts | where_exp: "post", "post.categories contains 'Paper'" %}
+
+        {% for post in paper_posts limit:3 %}
+          {% include entry.html %}
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</main>
