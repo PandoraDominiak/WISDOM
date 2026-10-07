@@ -8,9 +8,9 @@
 
   {% if post.wisdom_number %}
 
-    <p class="publication-number">
+    <div class="publication-number">
       WISDOM {{ post.wisdom_number }}
-    </p>
+    </div>
 
     <header class="entry-header">
       <h3 class="entry-title">
@@ -23,7 +23,7 @@
     <div class="publication-meta">
       <p>
         <strong>{{ post.authors_short }}</strong> · {{ post.year }}<br>
-        <em>{{ post.journal }}</em> <strong>{{ post.volume }}</strong>, {{ post.publication_ref }}
+        {{ post.journal }} <strong>{{ post.volume }}</strong>, {{ post.publication_ref }}
       </p>
     </div>
 
