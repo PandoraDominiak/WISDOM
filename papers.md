@@ -1,5 +1,5 @@
 ---
-title: Papers
+title: Publications
 layout: tag
 permalink: /papers/
 taxonomy: Paper

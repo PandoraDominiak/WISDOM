@@ -1,0 +1,30 @@
+{% assign site_logo = site.logo | relative_url %}
+
+<header id="masthead">
+  <div class="inner">
+    <div class="title-area">
+      {% if page.url == '/' %}
+        <h1 class="site-title">
+          <a href="{{ '/' | relative_url }}">
+            {% if site.logo %}<img src="{{ site_logo }}" alt="" class="site-logo">{% endif %}
+            <span>{{ site.title | escape }}</span>
+          </a>
+        </h1>
+      {% else %}
+        <p class="site-title">
+          <a href="{{ '/' | relative_url }}">
+            {% if site.logo %}<img src="{{ site_logo }}" alt="" class="site-logo">{% endif %}
+            <span>{{ site.title | escape }}</span>
+          </a>
+        </p>
+      {% endif %}
+    </div>
+
+    <nav class="wisdom-navigation" aria-label="Primary navigation">
+      <a href="{{ '/team/' | relative_url }}">Team</a>
+      <a href="{{ '/papers/' | relative_url }}">Publications</a>
+      <a href="{{ '/codes/' | relative_url }}">Software</a>
+      <a href="{{ '/data/' | relative_url }}">Data</a>
+    </nav>
+  </div>
+</header>

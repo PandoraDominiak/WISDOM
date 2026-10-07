@@ -1,0 +1,70 @@
+/* Desktop WISDOM navigation */
+
+@media (min-width: 701px) {
+
+  #masthead .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wisdom-navigation {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    margin-left: auto;
+  }
+
+  .wisdom-navigation a {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #181c22;
+    text-decoration: none;
+  }
+
+  .wisdom-navigation a:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .sidebar-toggle-wrapper {
+    display: none;
+  }
+}
+
+
+/* Mobile: retain the original hamburger menu */
+
+@media (min-width: 701px) {
+  #masthead .inner {
+    max-width: none;
+  }
+
+  .wisdom-navigation {
+    margin-right: 5rem;
+  }
+  
+  #masthead {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+  }
+
+  .sidebar-toggle-wrapper {
+    display: none;
+  }
+  
+  .canvas {
+  overflow: visible !important;
+  }
+}
+
+/* Mobile: hide desktop navigation and use original hamburger */
+
+@media screen and (max-width: 700px) {
+  #masthead .wisdom-navigation {
+    display: none !important;
+  }
+}
