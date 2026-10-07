@@ -61,8 +61,6 @@
   }
 }
 
-/* Mobile: hide desktop navigation and use original hamburger */
-
 @media screen and (max-width: 700px) {
   #masthead .wisdom-navigation {
     display: none !important;
@@ -76,6 +74,11 @@
 }
 
 /* Latest publications */
+
+.layout--home .latest-publications > .section-title {
+  text-align: center;
+}
+
 @media (min-width: 901px) {
   .layout--home .entries-list {
     display: grid;
@@ -90,8 +93,6 @@
     min-width: 0;
   }
 }
-
-
 
 /* Publication card typography */
 
