@@ -36,10 +36,14 @@
 
 /* Mobile: retain the original hamburger menu */
 
-@media (max-width: 700px) {
+@media (min-width: 701px) {
+  #masthead .inner {
+    max-width: none;
+  }
 
   .wisdom-navigation {
-    display: none;
+    margin-right: 5rem;
   }
+}
 
 }
