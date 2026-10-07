@@ -121,3 +121,43 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
+/* Homepage data release */
+
+.layout--home .wisdom-data-release {
+  text-align: center;
+  max-width: 900px;
+  margin: 5rem auto;
+}
+
+.layout--home .wisdom-data-release h2 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.layout--home .wisdom-data-release p {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.layout--home .data-release-button {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+
+  background: #181c22;
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 3px;
+}
+
+.layout--home .data-release-button:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
