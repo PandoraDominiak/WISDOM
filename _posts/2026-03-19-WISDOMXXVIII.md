@@ -2,6 +2,7 @@
  title: "WISDOM Project - XXVIII. Molecular gas measurement of the supermassive black hole mass of the galaxy NGC 1387"
 
  wisdom_number: "XXVIII"
+ display_title: "Molecular gas measurement of the supermassive black hole mass of the galaxy NGC 1387"
  authors_short: "Dominiak et al."
  year: 2026
  journal: "MNRAS"
