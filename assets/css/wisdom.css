@@ -69,16 +69,23 @@
   }
 }
 
+/* Give homepage content more horizontal space */
+.layout--home .index.inner {
+  max-width: 1400px;
+}
+
+/* Latest publications */
 @media (min-width: 901px) {
   .entries-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
   }
 
   .entries-list .entry {
     margin: 0;
     padding: 0;
     border-bottom: none;
+    min-width: 0;
   }
 }
