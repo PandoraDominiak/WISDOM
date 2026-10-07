@@ -1,14 +1,6 @@
-/* =========================================
-   WISDOM desktop navigation
-   ========================================= */
+/* WISDOM desktop navigation */
 
 .desktop-navigation {
-  position: absolute;
-  top: 0px;
-  right: 5rem;
-
-  height: 100%;
-
   display: flex;
   align-items: center;
   gap: 42px;
@@ -16,9 +8,8 @@
 
 .desktop-navigation a {
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
-
   color: #181c22;
   text-decoration: none;
 }
@@ -30,6 +21,7 @@
 
 
 /* Desktop */
+
 @media (min-width: 701px) {
 
   .sidebar-toggle-wrapper {
@@ -46,20 +38,11 @@
     display: none !important;
   }
 
-  /*
-     Keep the existing WISDOM masthead at the top
-     of the browser while the page scrolls.
-  */
-  .masthead {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #ffffff;
-  }
 }
 
 
 /* Mobile */
+
 @media (max-width: 700px) {
 
   .desktop-navigation {
