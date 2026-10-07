@@ -5,22 +5,53 @@
 {% endif %}
 
 <article class="entry publication-card">
-  <header class="entry-header">
-    <h3 class="entry-title">
-      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ title }}</a>
-    </h3>
-  </header>
 
-  <div class="entry-excerpt">
-    {% if post.excerpt %}
-      {{ post.excerpt | markdownify }}
+  {% if post.wisdom_number %}
 
-      <p>
-        <a href="{{ post.url | relative_url }}" class="more-link">
-          View publication
-          <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span>
+    <p class="publication-number">
+      WISDOM {{ post.wisdom_number }}
+    </p>
+
+    <header class="entry-header">
+      <h3 class="entry-title">
+        <a href="{{ post.url | relative_url }}" rel="bookmark">
+          {{ post.display_title | default: title }}
         </a>
+      </h3>
+    </header>
+
+    <div class="publication-meta">
+      <p>
+        <strong>{{ post.authors_short }}</strong> · {{ post.year }}<br>
+        <em>{{ post.journal }}</em> <strong>{{ post.volume }}</strong>, {{ post.publication_ref }}
       </p>
-    {% endif %}
-  </div>
+    </div>
+
+  {% else %}
+
+    <header class="entry-header">
+      <h3 class="entry-title">
+        <a href="{{ post.url | relative_url }}" rel="bookmark">
+          {{ title }}
+        </a>
+      </h3>
+    </header>
+
+    <div class="entry-excerpt">
+      {% if post.excerpt %}
+        {{ post.excerpt | markdownify }}
+      {% endif %}
+    </div>
+
+  {% endif %}
+
+  <p>
+    <a href="{{ post.url | relative_url }}" class="more-link">
+      View publication
+      <span class="icon icon--arrow-right">
+        {% include icon-arrow-right.svg %}
+      </span>
+    </a>
+  </p>
+
 </article>
