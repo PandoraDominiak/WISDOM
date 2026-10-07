@@ -1,1 +1,44 @@
+/* Desktop WISDOM navigation */
 
+@media (min-width: 701px) {
+
+  #masthead .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wisdom-navigation {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+  }
+
+  .wisdom-navigation a {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #181c22;
+    text-decoration: none;
+  }
+
+  .wisdom-navigation a:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .sidebar-toggle-wrapper {
+    display: none;
+  }
+}
+
+
+/* Mobile: retain the original hamburger menu */
+
+@media (max-width: 700px) {
+
+  .wisdom-navigation {
+    display: none;
+  }
+
+}
