@@ -77,13 +77,13 @@
 
 /* Latest publications */
 @media (min-width: 901px) {
-  .entries-list {
+  .layout--home .entries-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
   }
 
-  .entries-list .entry {
+  .layout--home .entries-list .entry {
     margin: 0;
     padding: 0;
     border-bottom: none;
