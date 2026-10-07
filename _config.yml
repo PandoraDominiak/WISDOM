@@ -17,8 +17,8 @@ lang: en-US
 title: WISDOM
 email: DavisT@cardiff.ac.uk
 description: "mm-Wave Interferometric Survey of Dark Object Masses"
-baseurl: ""
-url: "https://wisdom-project.org/"
+baseurl: "/WISDOM"
+url: "https://pandoradominiak.github.io"
 author:
   name: Timothy A. Davis
 #  twitter: timdavisastro
