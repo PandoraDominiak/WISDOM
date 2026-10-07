@@ -68,3 +68,17 @@
     display: none !important;
   }
 }
+
+@media (min-width: 901px) {
+  .entries-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .entries-list .entry {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+}
