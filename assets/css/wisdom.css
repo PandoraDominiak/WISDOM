@@ -55,6 +55,10 @@
   .sidebar-toggle-wrapper {
     display: none;
   }
+  
+  .wrapper {
+    transform: none !important;
+  }
 }
 
 /* Mobile: hide desktop navigation and use original hamburger */
