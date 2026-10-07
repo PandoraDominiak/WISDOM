@@ -1,31 +1,42 @@
 /* =========================================
-   WISDOM custom navigation
+   WISDOM fixed navigation
    ========================================= */
 
-.wisdom-masthead {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
+/* Hide the original Basically Basic navigation/masthead */
+.menu-toggle,
+.site-nav,
+.off-canvas {
+  display: none !important;
 }
 
+/* Our navigation bar */
+.wisdom-masthead {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 64px;
+
+  z-index: 9999;
+
+  background: #ffffff;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Contents of navigation bar */
 .wisdom-masthead__inner {
-  max-width: 1200px;
-  height: 72px;
+  max-width: 1240px;
+  height: 64px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 28px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* WISDOM logo and name */
-
+/* Logo + WISDOM */
 .wisdom-brand {
   display: flex;
   align-items: center;
@@ -36,34 +47,41 @@
 }
 
 .wisdom-brand:hover {
+  color: #222222;
   text-decoration: none;
 }
 
+/* Keep the original logo proportions */
 .wisdom-brand__logo {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
+
   object-fit: contain;
+  border-radius: 50%;
 }
 
+/* WISDOM wordmark */
 .wisdom-brand__name {
-  font-size: 1.25rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.35rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 
-/* Desktop navigation */
-
+/* Navigation links */
 .wisdom-nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 34px;
 }
 
 .wisdom-nav a {
-  color: #333333;
+  font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
+
+  color: #333333;
   text-decoration: none;
 }
 
@@ -73,40 +91,21 @@
 }
 
 /*
-   The masthead is fixed, so reserve the same
-   amount of space at the top of the document.
+   The fixed navigation is 64px tall.
+   Push the actual website down exactly 64px so that
+   the banner begins immediately below the navigation.
 */
 body {
-  padding-top: 72px;
+  padding-top: 64px !important;
 }
 
-/* Temporary mobile behaviour.
-   We will improve this with a proper mobile menu later.
-*/
+/* Mobile will be redesigned separately */
 @media (max-width: 700px) {
-  .wisdom-masthead__inner {
-    height: 64px;
-    padding: 0 18px;
-  }
-
-  .wisdom-brand__logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .wisdom-brand__name {
-    font-size: 1.05rem;
-  }
-
   .wisdom-nav {
     gap: 14px;
   }
 
   .wisdom-nav a {
     font-size: 0.85rem;
-  }
-
-  body {
-    padding-top: 64px;
   }
 }
