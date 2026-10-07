@@ -1,5 +1,14 @@
 ---
  title: "WISDOM Project - XXVI. Cross-checking supermassive black hole mass estimates from ALMA CO gas kinematics and SINFONI stellar kinematics in the galaxy NGC 4751"
+ 
+ display_title: "Cross-checking supermassive black hole mass estimates from ALMA CO gas kinematics and SINFONI stellar kinematics in the galaxy NGC 4751"
+wisdom_number: "XXVI"
+authors_short: "Dominiak et al."
+year: 2025
+journal: "MNRAS"
+volume: "542"
+publication_ref: "2039–2059"
+
  excerpt: "Pandora Dominiak, et al. (2025), MNRAS, 542, 3, 2039-2059"
  categories:
   - News
