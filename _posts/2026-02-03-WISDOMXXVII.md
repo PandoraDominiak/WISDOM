@@ -7,7 +7,7 @@
  year: 2026
  journal: "MNRAS"
  volume: "547"
- publication_ref: "stag221"
+ publication_ref: "stag222"
  
  excerpt: "Fu-Heng Liang, et al. (2026), MNRAS, 547, 4, stag221"
  categories:
