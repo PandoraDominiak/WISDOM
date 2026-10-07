@@ -4,10 +4,8 @@
 
 .desktop-navigation {
   position: absolute;
-  top: 0;
+  top: 42px;
   right: 5rem;
-
-  height: 100%;
 
   display: flex;
   align-items: center;
@@ -16,7 +14,7 @@
 
 .desktop-navigation a {
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
 
   color: #181c22;
