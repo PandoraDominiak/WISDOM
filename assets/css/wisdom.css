@@ -1,0 +1,112 @@
+/* =========================================
+   WISDOM custom navigation
+   ========================================= */
+
+.wisdom-masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.wisdom-masthead__inner {
+  max-width: 1200px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* WISDOM logo and name */
+
+.wisdom-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #222222;
+  text-decoration: none;
+}
+
+.wisdom-brand:hover {
+  text-decoration: none;
+}
+
+.wisdom-brand__logo {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.wisdom-brand__name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* Desktop navigation */
+
+.wisdom-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.wisdom-nav a {
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wisdom-nav a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*
+   The masthead is fixed, so reserve the same
+   amount of space at the top of the document.
+*/
+body {
+  padding-top: 72px;
+}
+
+/* Temporary mobile behaviour.
+   We will improve this with a proper mobile menu later.
+*/
+@media (max-width: 700px) {
+  .wisdom-masthead__inner {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .wisdom-brand__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wisdom-brand__name {
+    font-size: 1.05rem;
+  }
+
+  .wisdom-nav {
+    gap: 14px;
+  }
+
+  .wisdom-nav a {
+    font-size: 0.85rem;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+}
