@@ -99,6 +99,11 @@
   line-height: 1.7;
 }
 
+/* Hide redundant WISDOM heading on homepage */
+.layout--home .intro-title {
+  display: none;
+}
+
 /* Homepage science themes */
 
 .layout--home .wisdom-science {
