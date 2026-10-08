@@ -369,3 +369,26 @@
     max-height: 400px;
   }
 }
+
+/* Homepage science card colours */
+
+.layout--home .wisdom-science-item {
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.layout--home .wisdom-science-item:nth-child(1) {
+  background: #e8f5f3;
+  border-color: #c7e6e2;
+}
+
+.layout--home .wisdom-science-item:nth-child(2) {
+  background: #f3eefa;
+  border-color: #e0d5ef;
+}
+
+.layout--home .wisdom-science-item:nth-child(3) {
+  background: #fbf0e5;
+  border-color: #eed8c5;
+}
