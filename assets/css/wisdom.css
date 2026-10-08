@@ -451,3 +451,83 @@
 .layout--home .wisdom-science-item h3 {
   min-height: 3.4rem;
 } 
+
+
+/* ==========================================
+   HOMEPAGE — PUBLICATION CARD DESIGN
+   ========================================== */
+
+/* Section background */
+
+.layout--home .latest-publications {
+  background: #f8f8f7;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+}
+
+/* Equal-height publication cards */
+
+.layout--home .latest-publications .entries-list {
+  align-items: stretch;
+}
+
+/* Individual cards */
+
+.layout--home .latest-publications .publication-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.75rem;
+  background: #ffffff;
+  border: 1px solid #e5e0d9;
+  border-radius: 8px;
+}
+
+/* WISDOM paper number */
+
+.layout--home .publication-card .publication-number {
+  color: #a85c24;
+  margin-bottom: 1rem;
+}
+
+/* Paper title */
+
+.layout--home .publication-card .entry-title {
+  color: #181c22;
+  margin-bottom: 1.5rem;
+}
+
+/* Publication metadata */
+
+.layout--home .publication-card .publication-meta {
+  color: #55585c;
+}
+
+/* Push publication link towards card bottom */
+
+.layout--home .publication-card > p:last-child {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Publication links */
+
+.layout--home .publication-card .more-link {
+  color: #a85c24;
+  text-decoration: none;
+}
+
+.layout--home .publication-card .more-link:hover {
+  color: #854519;
+  text-decoration: underline;
+}
+
+/* Responsive section padding */
+
+@media (max-width: 900px) {
+  .layout--home .latest-publications {
+    padding: 2rem 1rem;
+  }
+}
+
