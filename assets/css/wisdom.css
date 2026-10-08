@@ -1,25 +1,64 @@
-/* Desktop WISDOM navigation */
 
-@media (min-width: 701px) {
+/* ==========================================
+   WISDOM WEBSITE — CUSTOM STYLES
+   ========================================== */
+
+/* TYPOGRAPHY AND SPACING */
+
+:root {
+  --wisdom-font: "Fira Sans", sans-serif;
+
+  --wisdom-text: #181c22;
+  --wisdom-heading-grey: #55585c;
+  --wisdom-white: #ffffff;
+
+  --wisdom-text-sm: 0.9375rem;
+  --wisdom-text-base: 1rem;
+  --wisdom-text-body: 1.0625rem;
+  --wisdom-text-lead: 1.25rem;
+
+  --wisdom-heading-card: 1.375rem;
+  --wisdom-heading-section: 2.25rem;
+  --wisdom-heading-acronym: 2.5rem;
+
+  --wisdom-column-gap: 4rem;
+  --wisdom-section-spacing: 5rem;
+}
+
+
+/* ==========================================
+   DESKTOP NAVIGATION — ABOVE 900px
+   ========================================== */
+
+@media (min-width: 901px) {
+
+  #masthead {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--wisdom-white);
+  }
 
   #masthead .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: none;
   }
 
   .wisdom-navigation {
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 2.625rem;
     margin-left: auto;
+    margin-right: 5rem;
   }
 
   .wisdom-navigation a {
-    font-family: "Fira Sans", sans-serif;
+    font-family: var(--wisdom-font);
     font-size: 1.2rem;
     font-weight: 600;
-    color: #181c22;
+    color: var(--wisdom-text);
     text-decoration: none;
   }
 
@@ -29,63 +68,69 @@
   }
 
   .sidebar-toggle-wrapper {
-    display: none;
-  }
-}
-
-
-/* Mobile: retain the original hamburger menu */
-
-@media (min-width: 701px) {
-  #masthead .inner {
-    max-width: none;
+    display: none !important;
   }
 
-  .wisdom-navigation {
-    margin-right: 5rem;
-  }
-  
-  #masthead {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #ffffff;
-  }
+  /* Allow sticky positioning within Basically Basic */
 
-  .sidebar-toggle-wrapper {
-    display: none;
-  }
-  
   .canvas {
-  overflow: visible !important;
+    overflow: visible !important;
   }
 }
 
-@media screen and (max-width: 700px) {
+
+/* ==========================================
+   MOBILE NAVIGATION — 900px AND BELOW
+   ========================================== */
+
+@media (max-width: 900px) {
+
   #masthead .wisdom-navigation {
     display: none !important;
   }
+
+  /* Restore the original theme hamburger */
+
+  .sidebar-toggle-wrapper {
+    display: block;
+  }
 }
 
-/* Give homepage content more horizontal space */
+
+/* ==========================================
+   HOMEPAGE — GENERAL LAYOUT
+   ========================================== */
+
 .layout--home .index.inner {
   max-width: none;
   width: 100%;
 }
 
-/* Homepage project overview */
+/* Hide the duplicate WISDOM title below the banner */
+
+.layout--home .intro-title {
+  display: none;
+}
+
+
+/* ==========================================
+   HOMEPAGE — PROJECT OVERVIEW
+   ========================================== */
 
 .layout--home .wisdom-overview {
-  max-width: 1000px;
-  margin: 4rem auto 5rem;
+  max-width: 1150px;
+  margin: 4rem auto var(--wisdom-section-spacing);
+  padding: 0 1rem;
   text-align: center;
 }
 
 .layout--home .wisdom-acronym {
-  font-size: 2rem;
+  font-family: var(--wisdom-font);
+  font-size: var(--wisdom-heading-acronym);
   font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: var(--wisdom-heading-grey);
+  margin-bottom: 1.75rem;
 }
 
 .layout--home .wisdom-acronym strong {
@@ -93,143 +138,214 @@
 }
 
 .layout--home .wisdom-overview p {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: var(--wisdom-text-lead);
+  line-height: 1.65;
+  color: var(--wisdom-text);
 }
 
-/* Hide redundant WISDOM heading on homepage */
-.layout--home .intro-title {
-  display: none;
-}
 
-/* Homepage science themes */
+/* ==========================================
+   HOMEPAGE — SCIENCE THEMES
+   ========================================== */
 
 .layout--home .wisdom-science {
-  margin: 5rem 0;
+  margin: var(--wisdom-section-spacing) 0;
 }
 
 .layout--home .wisdom-science > h2 {
-  text-align: center;
-  font-size: 2.4rem;
+  font-size: var(--wisdom-heading-section);
   line-height: 1.2;
+  text-align: center;
   margin-bottom: 3rem;
 }
 
 .layout--home .wisdom-science-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 4rem;
+  gap: var(--wisdom-column-gap);
+}
+
+.layout--home .wisdom-science-item {
+  min-width: 0;
 }
 
 .layout--home .wisdom-science-item h3 {
-  font-size: 1.35rem;
+  font-size: var(--wisdom-heading-card);
   line-height: 1.3;
   margin-bottom: 1rem;
 }
 
 .layout--home .wisdom-science-item p {
-  font-size: 1rem;
+  font-size: var(--wisdom-text-body);
   line-height: 1.7;
   margin: 0;
 }
 
-/* Stack science themes on smaller screens */
-@media (max-width: 800px) {
-  .layout--home .wisdom-science-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
 
-/* Homepage data release */
+/* ==========================================
+   HOMEPAGE — DATA RELEASE
+   ========================================== */
 
 .layout--home .wisdom-data-release {
-  text-align: center;
   max-width: 900px;
-  margin: 5rem auto;
+  margin: var(--wisdom-section-spacing) auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .layout--home .wisdom-data-release h2 {
-  font-size: 2.4rem;
+  font-size: var(--wisdom-heading-section);
   line-height: 1.2;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .layout--home .wisdom-data-release p {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto 2rem;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: var(--wisdom-text-lead);
+  line-height: 1.65;
 }
 
 .layout--home .data-release-button {
   display: inline-block;
   padding: 0.9rem 1.5rem;
-
-  background: #181c22;
-  color: #ffffff;
-
-  font-size: 1rem;
+  background: var(--wisdom-text);
+  color: var(--wisdom-white);
+  font-size: var(--wisdom-text-base);
   font-weight: 600;
   text-decoration: none;
-
   border-radius: 3px;
 }
 
 .layout--home .data-release-button:hover {
-  color: #ffffff;
+  color: var(--wisdom-white);
   text-decoration: none;
 }
 
-/* Latest publications */
+
+/* ==========================================
+   HOMEPAGE — LATEST PUBLICATIONS
+   ========================================== */
 
 .layout--home .latest-publications > .section-title {
   text-align: center;
 }
 
-@media (min-width: 901px) {
-  .layout--home .entries-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 4rem;
-  }
-
-  .layout--home .entries-list .entry {
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
-    min-width: 0;
-  }
+.layout--home .latest-publications .section-title h2 {
+  font-size: var(--wisdom-heading-section);
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
 }
 
-/* Publication card typography */
+.layout--home .latest-publications .entries-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--wisdom-column-gap);
+}
 
-.publication-card .publication-number {
-  font-size: 1.35rem;
+.layout--home .latest-publications .entries-list .entry {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  min-width: 0;
+}
+
+
+/* ==========================================
+   HOMEPAGE — PUBLICATION CARDS
+   ========================================== */
+
+.layout--home .publication-card .publication-number {
+  font-size: var(--wisdom-heading-card);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.3;
   margin-bottom: 1.25rem;
 }
 
-.publication-card .entry-title {
-  font-size: 1.35rem;
+.layout--home .publication-card .entry-title {
+  font-size: var(--wisdom-heading-card);
   line-height: 1.4;
   margin-bottom: 1rem;
 }
 
-.publication-card .publication-meta {
-  font-size: 1rem;
-  line-height: 1.5;
+.layout--home .publication-card .publication-meta {
+  font-size: var(--wisdom-text-base);
+  line-height: 1.55;
 }
 
-.publication-card .publication-meta p {
+.layout--home .publication-card .publication-meta p {
   margin-bottom: 1.25rem;
 }
 
-.publication-card .more-link {
-  font-size: 1rem;
+.layout--home .publication-card .more-link {
+  font-size: var(--wisdom-text-base);
   font-weight: 600;
 }
 
+
+/* ==========================================
+   SMALL DESKTOPS — 901px TO 1100px
+   ========================================== */
+
+@media (min-width: 901px) and (max-width: 1100px) {
+
+  :root {
+    --wisdom-column-gap: 2rem;
+  }
+
+  .wisdom-navigation {
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .wisdom-navigation a {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ==========================================
+   MOBILE / TABLET — 900px AND BELOW
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  :root {
+    --wisdom-heading-acronym: 1.75rem;
+    --wisdom-heading-section: 1.75rem;
+    --wisdom-heading-card: 1.25rem;
+
+    --wisdom-text-lead: 1.0625rem;
+    --wisdom-text-body: 1rem;
+
+    --wisdom-column-gap: 2rem;
+    --wisdom-section-spacing: 3.5rem;
+  }
+
+  .layout--home .wisdom-overview {
+    margin-top: 3rem;
+  }
+
+  /* Direct transition from three columns to one */
+
+  .layout--home .wisdom-science-grid,
+  .layout--home .latest-publications .entries-list {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .layout--home .wisdom-science > h2 {
+    margin-bottom: 2rem;
+  }
+
+  .layout--home .wisdom-overview p,
+  .layout--home .wisdom-data-release p {
+    line-height: 1.65;
+  }
+
+  .layout--home .data-release-button {
+    padding: 0.85rem 1.3rem;
+  }
+}
