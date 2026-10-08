@@ -351,3 +351,21 @@
     padding: 0.85rem 1.3rem;
   }
 }
+
+/* Homepage science images */
+
+.layout--home .wisdom-science-image {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .layout--home .wisdom-science-image {
+    height: auto;
+    max-height: 400px;
+  }
+}
