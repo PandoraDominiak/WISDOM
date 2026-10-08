@@ -118,8 +118,8 @@
    ========================================== */
 
 .layout--home .wisdom-overview {
-  max-width: 1150px;
-  margin: 4rem auto var(--wisdom-section-spacing);
+  max-width: 1200px;
+  margin: 2.5rem auto var(--wisdom-section-spacing);
   margin-top: 2rem;
   padding: 0 1rem;
   text-align: center;
