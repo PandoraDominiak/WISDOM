@@ -34,7 +34,7 @@
 /* Homepage overview */
 .layout--home .index.inner { max-width: none; width: 100%; }
 .layout--home .intro-title { display: none; }
-.layout--home .wisdom-overview { max-width: 1200px; margin: 2rem auto var(--wisdom-section-spacing); padding: 0 1rem; text-align: center; }
+.layout--home .wisdom-overview { max-width: 1200px; margin: 0 auto var(--wisdom-section-spacing); padding: 0 1rem; text-align: center; }
 .layout--home .wisdom-acronym { font-family: var(--wisdom-font); font-size: var(--wisdom-heading-acronym); font-weight: 400; line-height: 1.3; color: var(--wisdom-heading-grey); margin-bottom: 1.75rem; }
 .layout--home .wisdom-acronym strong { font-weight: 700; color: var(--wisdom-text); }
 .layout--home .wisdom-acronym::after { content: ""; display: block; width: 108px; height: 3px; background: #a85c24; border-radius: 2px; margin: 1.5rem auto 0; }
@@ -97,7 +97,7 @@
     --wisdom-text-body: 1rem;
     --wisdom-section-spacing: 3.5rem;
   }
-  .layout--home .wisdom-overview { margin-top: 3rem; }
+  .layout--home .wisdom-overview { margin-top: 1rem; }
   .layout--home .wisdom-science-grid,
   .layout--home .latest-publications .entries-list { grid-template-columns: 1fr; gap: 2.5rem; }
   .layout--home .wisdom-science > h2 { margin-bottom: 2rem; }
@@ -121,6 +121,11 @@
 
 .layout--home .wisdom-science-item:nth-child(3) .wisdom-science-image {
   box-sizing: border-box;
-  padding-right: 1.5rem;
+  padding-right: 1.0rem;
   object-position: left center;
+}
+
+.layout--home .wisdom-overview > .data-release-button {
+  display: inline-block;
+  margin-top: 2rem;
 }
