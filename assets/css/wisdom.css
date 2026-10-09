@@ -1,602 +1,106 @@
-
-/* ==========================================
-   WISDOM WEBSITE — CUSTOM STYLES
-   ========================================== */
-
-/* TYPOGRAPHY AND SPACING */
-
+/* WISDOM custom stylesheet — consolidated homepage styles */
 :root {
   --wisdom-font: "Fira Sans", sans-serif;
-
   --wisdom-text: #181c22;
   --wisdom-heading-grey: #55585c;
-  --wisdom-white: #ffffff;
-
-  --wisdom-text-sm: 0.9375rem;
+  --wisdom-white: #fff;
+  --wisdom-copper: #a85c24;
+  --wisdom-copper-hover: #854519;
   --wisdom-text-base: 1rem;
   --wisdom-text-body: 1.0625rem;
   --wisdom-text-lead: 1.25rem;
-
   --wisdom-heading-card: 1.375rem;
   --wisdom-heading-section: 2.25rem;
   --wisdom-heading-acronym: 2.5rem;
-
-  --wisdom-column-gap: 4rem;
+  --wisdom-column-gap: 2rem;
   --wisdom-section-spacing: 5rem;
 }
 
-
-/* ==========================================
-   DESKTOP NAVIGATION — ABOVE 900px
-   ========================================== */
-
+/* Navigation: keep existing sticky desktop behaviour */
 @media (min-width: 901px) {
-
-  #masthead {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: var(--wisdom-white);
-  }
-
-  #masthead .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: none;
-  }
-
-  .wisdom-navigation {
-    display: flex;
-    align-items: center;
-    gap: 2.625rem;
-    margin-left: auto;
-    margin-right: 5rem;
-  }
-
-  .wisdom-navigation a {
-    font-family: var(--wisdom-font);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--wisdom-text);
-    text-decoration: none;
-  }
-
-  .wisdom-navigation a:hover {
-    color: #000000;
-    text-decoration: none;
-  }
-
-  .sidebar-toggle-wrapper {
-    display: none !important;
-  }
-
-  /* Allow sticky positioning within Basically Basic */
-
-  .canvas {
-    overflow: visible !important;
-  }
+  #masthead { position: sticky; top: 0; z-index: 1000; background: var(--wisdom-white); }
+  #masthead .inner { display: flex; align-items: center; justify-content: space-between; max-width: none; }
+  .wisdom-navigation { display: flex; align-items: center; gap: 2.625rem; margin-left: auto; margin-right: 5rem; }
+  .wisdom-navigation a { font-family: var(--wisdom-font); font-size: 1.2rem; font-weight: 600; color: var(--wisdom-text); text-decoration: none; }
+  .wisdom-navigation a:hover { color: #000; text-decoration: none; }
+  .sidebar-toggle-wrapper { display: none !important; }
+  .canvas { overflow: visible !important; }
 }
-
-
-/* ==========================================
-   MOBILE NAVIGATION — 900px AND BELOW
-   ========================================== */
-
 @media (max-width: 900px) {
-
-  #masthead .wisdom-navigation {
-    display: none !important;
-  }
-
-  /* Restore the original theme hamburger */
-
-  .sidebar-toggle-wrapper {
-    display: block;
-  }
+  #masthead .wisdom-navigation { display: none !important; }
+  .sidebar-toggle-wrapper { display: block; }
 }
 
+/* Homepage overview */
+.layout--home .index.inner { max-width: none; width: 100%; }
+.layout--home .intro-title { display: none; }
+.layout--home .wisdom-overview { max-width: 1200px; margin: 2rem auto var(--wisdom-section-spacing); padding: 0 1rem; text-align: center; }
+.layout--home .wisdom-acronym { font-family: var(--wisdom-font); font-size: var(--wisdom-heading-acronym); font-weight: 400; line-height: 1.3; color: var(--wisdom-heading-grey); margin-bottom: 1.75rem; }
+.layout--home .wisdom-acronym strong { font-weight: 700; color: var(--wisdom-text); }
+.layout--home .wisdom-overview p { max-width: 1000px; margin: 0 auto; font-size: var(--wisdom-text-lead); line-height: 1.65; color: var(--wisdom-text); }
 
-/* ==========================================
-   HOMEPAGE — GENERAL LAYOUT
-   ========================================== */
+/* Science cards */
+.layout--home .wisdom-science { margin: var(--wisdom-section-spacing) 0; }
+.layout--home .wisdom-science > h2 { font-size: var(--wisdom-heading-section); line-height: 1.2; text-align: center; margin-bottom: 3rem; }
+.layout--home .wisdom-science-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--wisdom-column-gap); }
+.layout--home .wisdom-science-item { min-width: 0; padding: 1.5rem; border-radius: 10px; border: 1px solid transparent; }
+.layout--home .wisdom-science-item:nth-child(1) { background: #e8f5f3; border-color: #c7e6e2; }
+.layout--home .wisdom-science-item:nth-child(2) { background: #f3eefa; border-color: #e0d5ef; }
+.layout--home .wisdom-science-item:nth-child(3) { background: #fbf0e5; border-color: #eed8c5; }
+.layout--home .wisdom-science-image { display: block; width: 100%; height: 270px; object-fit: contain; object-position: center; background: #fff; padding: 0; border-radius: 6px; margin-bottom: 1.5rem; }
+.layout--home .wisdom-science-item h3 { font-size: var(--wisdom-heading-card); line-height: 1.3; margin-bottom: 1rem; min-height: 3.4rem; }
+.layout--home .wisdom-science-item:nth-child(1) h3 { color: #166b70; }
+.layout--home .wisdom-science-item:nth-child(2) h3 { color: #6e5098; }
+.layout--home .wisdom-science-item:nth-child(3) h3 { color: #97501f; }
+.layout--home .wisdom-science-item p { font-size: var(--wisdom-text-body); line-height: 1.7; margin: 0; }
 
-.layout--home .index.inner {
-  max-width: none;
-  width: 100%;
-}
-
-/* Hide the duplicate WISDOM title below the banner */
-
-.layout--home .intro-title {
-  display: none;
-}
-
-
-/* ==========================================
-   HOMEPAGE — PROJECT OVERVIEW
-   ========================================== */
-
-.layout--home .wisdom-overview {
-  max-width: 1200px;
-  margin: 2.5rem auto var(--wisdom-section-spacing);
-  margin-top: 2rem;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.layout--home .wisdom-acronym {
-  font-family: var(--wisdom-font);
-  font-size: var(--wisdom-heading-acronym);
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--wisdom-heading-grey);
-  margin-bottom: 1.75rem;
-}
-
-.layout--home .wisdom-acronym strong {
-  font-weight: 700;
-  color: #181c22;
-}
-
-.layout--home .wisdom-overview p {
-  max-width: 1000px;
-  margin: 0 auto;
-  font-size: var(--wisdom-text-lead);
-  line-height: 1.65;
-  color: var(--wisdom-text);
-}
-
-
-/* ==========================================
-   HOMEPAGE — SCIENCE THEMES
-   ========================================== */
-
-.layout--home .wisdom-science {
-  margin: var(--wisdom-section-spacing) 0;
-}
-
-.layout--home .wisdom-science > h2 {
-  font-size: var(--wisdom-heading-section);
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.layout--home .wisdom-science-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--wisdom-column-gap);
-}
-
-.layout--home .wisdom-science-item {
-  min-width: 0;
-}
-
-.layout--home .wisdom-science-item h3 {
-  font-size: var(--wisdom-heading-card);
-  line-height: 1.3;
-  margin-bottom: 1rem;
-}
-
-.layout--home .wisdom-science-item p {
-  font-size: var(--wisdom-text-body);
-  line-height: 1.7;
-  margin: 0;
-}
-
-
-/* ==========================================
-   HOMEPAGE — DATA RELEASE
-   ========================================== */
-
-.layout--home .wisdom-data-release {
-  max-width: 900px;
-  margin: var(--wisdom-section-spacing) auto;
-  padding: 0 1rem;
-  text-align: center;
-  background: #ffffff;
-}
-
-/* Main heading */
-
-.layout--home .wisdom-data-release h2 {
-  font-size: var(--wisdom-heading-section);
-  line-height: 1.2;
-  color: #181c22;
-  margin-bottom: 1.25rem;
-}
-
-/* Short copper line beneath heading */
-
-.layout--home .wisdom-data-release h2::after {
-  content: "";
-  display: block;
-  width: 54px;
-  height: 3px;
-  background: #a85c24;
-  border-radius: 2px;
-  margin: 1.25rem auto 0;
-}
-
-/* Description */
-
-.layout--home .wisdom-data-release p {
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  font-size: var(--wisdom-text-lead);
-  line-height: 1.65;
-  color: #55585c;
-}
-
-/* Copper button */
-
-.layout--home .data-release-button {
-  display: inline-block;
-  padding: 0.9rem 1.5rem;
-  background: #a85c24;
-  color: #ffffff;
-  font-size: var(--wisdom-text-base);
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-/* Button hover */
-
+/* Data release */
+.layout--home .wisdom-data-release { max-width: 900px; margin: var(--wisdom-section-spacing) auto; padding: 0 1rem; text-align: center; background: #fff; }
+.layout--home .wisdom-data-release h2 { font-size: var(--wisdom-heading-section); line-height: 1.2; color: var(--wisdom-text); margin-bottom: 1.25rem; }
+.layout--home .wisdom-data-release h2::after,
+.layout--home .latest-publications .section-title h2::after { content: ""; display: block; width: 54px; height: 3px; background: var(--wisdom-copper); border-radius: 2px; margin: 1.25rem auto 0; }
+.layout--home .wisdom-data-release p { max-width: 800px; margin: 0 auto 2rem; font-size: var(--wisdom-text-lead); line-height: 1.65; color: var(--wisdom-heading-grey); }
+.layout--home .data-release-button { display: inline-block; padding: 0.9rem 1.5rem; background: var(--wisdom-copper); color: #fff; font-size: var(--wisdom-text-base); font-weight: 600; text-decoration: none; border-radius: 4px; transition: background-color 0.2s ease; }
 .layout--home .data-release-button:hover,
-.layout--home .data-release-button:focus-visible {
-  background: #854519;
-  color: #ffffff;
-  text-decoration: none;
-}
+.layout--home .data-release-button:focus-visible { background: var(--wisdom-copper-hover); color: #fff; text-decoration: none; }
 
+/* Latest publications: same column geometry as science */
+.layout--home .latest-publications { background: #f8f8f7; padding: 3rem 0; border-radius: 10px; }
+.layout--home .latest-publications > .section-title { text-align: center; }
+.layout--home .latest-publications .section-title h2 { font-size: var(--wisdom-heading-section); line-height: 1.2; margin-bottom: 2.5rem; }
+.layout--home .latest-publications .entries-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--wisdom-column-gap); align-items: stretch; }
+/* Specificity intentionally exceeds theme's .entries-list .entry rule. */
+.layout--home .latest-publications .entries-list .entry.publication-card { display: flex; flex-direction: column; box-sizing: border-box; min-width: 0; height: 100%; margin: 0; padding: 1.5rem; background: #fff; border: 1px solid #e5e0d9; border-radius: 8px; }
+.layout--home .publication-card .publication-number { font-size: var(--wisdom-heading-card); font-weight: 600; line-height: 1.3; color: var(--wisdom-copper); margin-bottom: 1rem; }
+.layout--home .publication-card .entry-header { min-height: 8.5rem; margin: 0; }
+.layout--home .publication-card .entry-title { font-size: var(--wisdom-heading-card); line-height: 1.4; color: var(--wisdom-text); margin: 0; }
+.layout--home .publication-card .publication-meta { font-size: var(--wisdom-text-base); line-height: 1.55; color: var(--wisdom-heading-grey); margin-top: 0.5rem; }
+.layout--home .publication-card .publication-meta p { margin-bottom: 0; }
+.layout--home .publication-card > p:last-child { margin-top: auto; padding-top: 1.5rem; margin-bottom: 0; }
+.layout--home .publication-card .more-link { font-size: var(--wisdom-text-base); font-weight: 600; color: var(--wisdom-copper); text-decoration: none; }
+.layout--home .publication-card .more-link:hover { color: var(--wisdom-copper-hover); text-decoration: underline; }
 
-
-/* ==========================================
-   HOMEPAGE — LATEST PUBLICATIONS
-   ========================================== */
-
-.layout--home .latest-publications > .section-title {
-  text-align: center;
-}
-
-.layout--home .latest-publications .section-title h2 {
-  font-size: var(--wisdom-heading-section);
-  line-height: 1.2;
-  margin-bottom: 2.5rem;
-}
-
-.layout--home .latest-publications .entries-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--wisdom-column-gap);
-}
-
-.layout--home .latest-publications .entries-list .entry {
-  margin: 0;
-  padding: 0;
-  border-bottom: none;
-  min-width: 0;
-}
-
-
-/* ==========================================
-   HOMEPAGE — PUBLICATION CARDS
-   ========================================== */
-
-.layout--home .publication-card .publication-number {
-  font-size: var(--wisdom-heading-card);
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 1.25rem;
-}
-
-.layout--home .publication-card .entry-title {
-  font-size: var(--wisdom-heading-card);
-  line-height: 1.4;
-  margin-bottom: 1rem;
-}
-
-.layout--home .publication-card .publication-meta {
-  font-size: var(--wisdom-text-base);
-  line-height: 1.55;
-}
-
-.layout--home .publication-card .publication-meta p {
-  margin-bottom: 1.25rem;
-}
-
-.layout--home .publication-card .more-link {
-  font-size: var(--wisdom-text-base);
-  font-weight: 600;
-}
-
-
-/* ==========================================
-   SMALL DESKTOPS — 901px TO 1100px
-   ========================================== */
-
+/* Responsive layout: 3 columns directly to 1 at 900px */
 @media (min-width: 901px) and (max-width: 1100px) {
-
-  :root {
-    --wisdom-column-gap: 2rem;
-  }
-
-  .wisdom-navigation {
-    gap: 1.5rem;
-    margin-right: 1rem;
-  }
-
-  .wisdom-navigation a {
-    font-size: 1.05rem;
-  }
+  .wisdom-navigation { gap: 1.5rem; margin-right: 1rem; }
+  .wisdom-navigation a { font-size: 1.05rem; }
 }
-
-
-/* ==========================================
-   MOBILE / TABLET — 900px AND BELOW
-   ========================================== */
-
 @media (max-width: 900px) {
-
   :root {
     --wisdom-heading-acronym: 1.75rem;
     --wisdom-heading-section: 1.75rem;
     --wisdom-heading-card: 1.25rem;
-
     --wisdom-text-lead: 1.0625rem;
     --wisdom-text-body: 1rem;
-
-    --wisdom-column-gap: 2rem;
     --wisdom-section-spacing: 3.5rem;
   }
-
-  .layout--home .wisdom-overview {
-    margin-top: 3rem;
-  }
-
-  /* Direct transition from three columns to one */
-
+  .layout--home .wisdom-overview { margin-top: 3rem; }
   .layout--home .wisdom-science-grid,
-  .layout--home .latest-publications .entries-list {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .layout--home .wisdom-science > h2 {
-    margin-bottom: 2rem;
-  }
-
-  .layout--home .wisdom-overview p,
-  .layout--home .wisdom-data-release p {
-    line-height: 1.65;
-  }
-
-  .layout--home .data-release-button {
-    padding: 0.85rem 1.3rem;
-  }
+  .layout--home .latest-publications .entries-list { grid-template-columns: 1fr; gap: 2.5rem; }
+  .layout--home .wisdom-science > h2 { margin-bottom: 2rem; }
+  .layout--home .wisdom-science-image { height: auto; max-height: 400px; }
+  .layout--home .wisdom-science-item h3 { min-height: 0; }
+  .layout--home .publication-card .entry-header { min-height: 0; }
+  .layout--home .latest-publications { padding: 2rem 0; }
+  .layout--home .data-release-button { padding: 0.85rem 1.3rem; }
 }
-
-/* Homepage science images */
-
-
-
-@media (max-width: 900px) {
-  .layout--home .wisdom-science-image {
-    height: auto;
-    max-height: 400px;
-  }
-}
-
-/* Homepage science card colours */
-
-.layout--home .wisdom-science-item {
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid transparent;
-}
-
-.layout--home .wisdom-science-item:nth-child(1) {
-  background: #e8f5f3;
-  border-color: #c7e6e2;
-}
-
-.layout--home .wisdom-science-item:nth-child(2) {
-  background: #f3eefa;
-  border-color: #e0d5ef;
-}
-
-.layout--home .wisdom-science-item:nth-child(3) {
-  background: #fbf0e5;
-  border-color: #eed8c5;
-}
-
-/* Refine science card geometry */
-
-.layout--home .wisdom-science-grid {
-  gap: 2rem;
-}
-
-/* Consistent white figure panels */
-
-.layout--home .wisdom-science-image {
-  display: block;
-  width: 100%;
-  height: 270px;
-  object-fit: contain;
-  object-position: center;
-  background: #ffffff;
-  padding: 0;
-  border-radius: 6px;
-  margin-bottom: 1.5rem;
-}
-
-
-/* Matching heading accents */
-
-.layout--home .wisdom-science-item:nth-child(1) h3 {
-  color: #166b70;
-}
-
-.layout--home .wisdom-science-item:nth-child(2) h3 {
-  color: #6e5098;
-}
-
-.layout--home .wisdom-science-item:nth-child(3) h3 {
-  color: #97501f;
-}
-
-.layout--home .wisdom-science-item h3 {
-  min-height: 3.4rem;
-} 
-
-
-/* ==========================================
-   HOMEPAGE — PUBLICATION CARD DESIGN
-   ========================================== */
-
-/* Section background */
-
-.layout--home .latest-publications {
-  background: #f8f8f7;
-  padding: 3rem 2rem;
-  border-radius: 10px;
-}
-
-/* Equal-height publication cards */
-
-.layout--home .latest-publications .entries-list {
-  align-items: stretch;
-}
-
-/* Individual cards */
-
-.layout--home .latest-publications .publication-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 1.75rem;
-  background: #ffffff;
-  border: 1px solid #e5e0d9;
-  border-radius: 8px;
-}
-
-/* WISDOM paper number */
-
-.layout--home .publication-card .publication-number {
-  color: #a85c24;
-  margin-bottom: 1rem;
-}
-
-/* Paper title */
-
-.layout--home .publication-card .entry-title {
-  color: #181c22;
-  margin-bottom: 1.5rem;
-}
-
-/* Publication metadata */
-
-.layout--home .publication-card .publication-meta {
-  color: #55585c;
-}
-
-/* Push publication link towards card bottom */
-
-.layout--home .publication-card > p:last-child {
-  margin-top: auto;
-  padding-top: 1.5rem;
-  margin-bottom: 0;
-}
-
-/* Publication links */
-
-.layout--home .publication-card .more-link {
-  color: #a85c24;
-  text-decoration: none;
-}
-
-.layout--home .publication-card .more-link:hover {
-  color: #854519;
-  text-decoration: underline;
-}
-
-/* Responsive section padding */
-
-@media (max-width: 900px) {
-  .layout--home .latest-publications {
-    padding: 2rem 1rem;
-  }
-}
-
-
-/* ==========================================
-   HOMEPAGE — PUBLICATION REFINEMENTS
-   ========================================== */
-
-/* Reduce the gap between publication cards */
-
-.layout--home .latest-publications .entries-list {
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-/* Expand cards and improve internal spacing */
-
-.layout--home .latest-publications .publication-card {
-  padding: 2rem;
-  min-width: 0;
-}
-
-/* Consistent paper-number spacing */
-
-.layout--home .publication-card .publication-number {
-  margin-bottom: 1rem;
-}
-
-/* Reserve equal vertical space for paper titles */
-
-.layout--home .publication-card .entry-header {
-  min-height: 12rem;
-}
-
-.layout--home .publication-card .entry-title {
-  margin-bottom: 0;
-}
-
-/* Align metadata across all three cards */
-
-.layout--home .publication-card .publication-meta {
-  margin-top: 0;
-}
-
-/* Keep publication links aligned at bottom */
-
-.layout--home .publication-card > p:last-child {
-  margin-top: auto;
-  padding-top: 1.5rem;
-}
-
-/* Copper underline beneath Latest Publications */
-
-.layout--home .latest-publications .section-title h2::after {
-  content: "";
-  display: block;
-  width: 54px;
-  height: 3px;
-  background: #a85c24;
-  border-radius: 2px;
-  margin: 1.25rem auto 0;
-}
-
-/* Don't reserve excessive title space on mobile */
-
-@media (max-width: 900px) {
-  .layout--home .publication-card .entry-header {
-    min-height: 0;
-  }
-}
-
-
