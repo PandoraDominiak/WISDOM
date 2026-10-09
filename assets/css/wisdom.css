@@ -65,7 +65,8 @@
 .layout--home .data-release-button:focus-visible { background: var(--wisdom-copper-hover); color: #fff; text-decoration: none; }
 
 /* Latest publications: same column geometry as science */
-.layout--home .latest-publications { background: #f8f8f7; padding: 3rem 0; border-radius: 10px; }
+.layout--home .latest-publications { position: relative; background: transparent; border-radius: 0; padding: 3rem 0; isolation: isolate; }
+.layout--home .latest-publications::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: #f8f8f7; z-index: -1; }
 .layout--home .latest-publications > .section-title { text-align: center; }
 .layout--home .latest-publications .section-title h2 { font-size: var(--wisdom-heading-section); line-height: 1.2; margin-bottom: 2.5rem; }
 .layout--home .latest-publications .entries-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--wisdom-column-gap); align-items: stretch; }
