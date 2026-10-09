@@ -1,9 +1,7 @@
 ---
 title: Publications
-layout: tag
+layout: publications
 permalink: /papers/
 taxonomy: Paper
 image: /assets/images/WISDOMbanner_thin.png
 ---
-
-Below are listed both WISDOM "numeral" papers, and associated manuscripts. Click for more information. 
