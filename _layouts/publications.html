@@ -48,9 +48,7 @@ layout: default
 
             {% if post.journal %}
               <span class="wisdom-publication-journal">
-                {{ post.journal }}
-                {% if post.volume %} {{ post.volume }}{% endif %}
-                {% if post.publication_ref %}, {{ post.publication_ref }}{% endif %}
+                {{ post.journal }}{% if post.volume %} {{ post.volume }}{% endif %}{% if post.publication_ref %}, {{ post.publication_ref }}{% endif %}
               </span>
             {% endif %}
 
