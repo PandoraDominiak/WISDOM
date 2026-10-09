@@ -117,3 +117,10 @@
   margin-top: 2.5rem;
 }
 
+/* Adjust only the third science figure */
+
+.layout--home .wisdom-science-item:nth-child(3) .wisdom-science-image {
+  box-sizing: border-box;
+  padding-right: 1.5rem;
+  object-position: left center;
+}
