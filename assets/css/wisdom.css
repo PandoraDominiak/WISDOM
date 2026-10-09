@@ -107,3 +107,32 @@
   .layout--home .latest-publications { padding: 2rem 0; }
   .layout--home .data-release-button { padding: 0.85rem 1.3rem; }
 }
+
+/* ==========================================
+   VIEW ALL PUBLICATIONS BUTTON
+   ========================================== */
+
+.layout--home .wisdom-publications-action {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.layout--home .wisdom-publications-button {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  border: 1.5px solid #a85c24;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #a85c24;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.layout--home .wisdom-publications-button:hover,
+.layout--home .wisdom-publications-button:focus-visible {
+  background: #a85c24;
+  color: #ffffff;
+  text-decoration: none;
+}
