@@ -1,0 +1,73 @@
+
+---
+layout: default
+---
+
+<main id="main" class="page-content" aria-label="Publications">
+
+  <div class="wisdom-publications-page">
+
+    <header class="wisdom-publications-header">
+      <h1>Publications</h1>
+      <p>
+        Peer-reviewed publications from the WISDOM collaboration
+        and associated research.
+      </p>
+    </header>
+
+    <div class="wisdom-publications-list">
+
+      {% assign paper_posts = site.posts | where_exp: "post", "post.categories contains 'Paper'" | sort: "date" | reverse %}
+
+      {% for post in paper_posts %}
+
+        <article class="wisdom-publication-entry">
+
+          {% if post.wisdom_number %}
+            <div class="wisdom-publication-number">
+              WISDOM {{ post.wisdom_number }}
+            </div>
+          {% else %}
+            <div class="wisdom-publication-number">
+              Associated Publication
+            </div>
+          {% endif %}
+
+          <h2 class="wisdom-publication-title">
+            {{ post.display_title | default: post.title }}
+          </h2>
+
+          <div class="wisdom-publication-details">
+
+            {% if post.authors_short %}
+              <span>{{ post.authors_short }}</span>
+            {% endif %}
+
+            {% if post.year %}
+              <span>({{ post.year }})</span>
+            {% endif %}
+
+            {% if post.journal %}
+              <span class="wisdom-publication-journal">
+                {{ post.journal }}
+                {% if post.volume %} {{ post.volume }}{% endif %}
+                {% if post.publication_ref %}, {{ post.publication_ref }}{% endif %}
+              </span>
+            {% endif %}
+
+          </div>
+
+          <a class="wisdom-publication-link"
+             href="{{ post.url | relative_url }}">
+            View publication &rarr;
+          </a>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</main>
