@@ -531,3 +531,72 @@
   }
 }
 
+
+/* ==========================================
+   HOMEPAGE — PUBLICATION REFINEMENTS
+   ========================================== */
+
+/* Reduce the gap between publication cards */
+
+.layout--home .latest-publications .entries-list {
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Expand cards and improve internal spacing */
+
+.layout--home .latest-publications .publication-card {
+  padding: 2rem;
+  min-width: 0;
+}
+
+/* Consistent paper-number spacing */
+
+.layout--home .publication-card .publication-number {
+  margin-bottom: 1rem;
+}
+
+/* Reserve equal vertical space for paper titles */
+
+.layout--home .publication-card .entry-header {
+  min-height: 12rem;
+}
+
+.layout--home .publication-card .entry-title {
+  margin-bottom: 0;
+}
+
+/* Align metadata across all three cards */
+
+.layout--home .publication-card .publication-meta {
+  margin-top: 0;
+}
+
+/* Keep publication links aligned at bottom */
+
+.layout--home .publication-card > p:last-child {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+/* Copper underline beneath Latest Publications */
+
+.layout--home .latest-publications .section-title h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  background: #a85c24;
+  border-radius: 2px;
+  margin: 1.25rem auto 0;
+}
+
+/* Don't reserve excessive title space on mobile */
+
+@media (max-width: 900px) {
+  .layout--home .publication-card .entry-header {
+    min-height: 0;
+  }
+}
+
+
