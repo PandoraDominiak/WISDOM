@@ -157,19 +157,33 @@
 
 /* Main content container */
 
+
 .wisdom-publications-page {
-  width: 100%;
-  max-width: 1350px;
-  margin: 3rem auto 6rem;
-  padding: 0 2rem;
+  width: calc(100% - 4rem);
+  max-width: 1450px;
+  margin: 0 auto 5rem;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Page heading */
+/* Remove unused theme introduction space */
+
+body:has(.wisdom-publications-page) .intro-text {
+  display: none;
+}
+
+/* Reduce spacing beneath the banner */
+
+body:has(.wisdom-publications-page) .intro {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Control spacing above the Publications heading */
 
 .wisdom-publications-header {
-  text-align: center;
-  margin-bottom: 4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .wisdom-publications-header h1 {
@@ -177,6 +191,18 @@
   line-height: 1.2;
   color: #181c22;
   margin-bottom: 1.5rem;
+}
+
+/* Allow the Publications archive to use the available width */
+
+body:has(.wisdom-publications-page) .page-content {
+  width: 100%;
+  max-width: none;
+}
+
+body:has(.wisdom-publications-page) .page-content > .inner {
+  width: 100%;
+  max-width: none;
 }
 
 /* Copper underline */
@@ -397,12 +423,13 @@
 @media (max-width: 900px) {
 
   .wisdom-publications-page {
-    margin: 2rem auto 4rem;
-    padding: 0 1.25rem;
+    width: calc(100% - 2.5rem);
+    margin-bottom: 4rem;
   }
 
   .wisdom-publications-header {
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .wisdom-publication-title {
