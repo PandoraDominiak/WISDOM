@@ -269,20 +269,151 @@
   text-decoration: underline;
 }
 
+
+/* ==========================================
+   PUBLICATIONS ARCHIVE
+   ========================================== */
+
+/* Main content container */
+
+.wisdom-publications-page {
+  max-width: 1100px;
+  margin: 3rem auto 6rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Page heading */
+
+.wisdom-publications-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.wisdom-publications-header h1 {
+  font-size: var(--wisdom-heading-section);
+  line-height: 1.2;
+  color: #181c22;
+  margin-bottom: 1.5rem;
+}
+
+/* Copper underline */
+
+.wisdom-publications-header h1::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  background: #a85c24;
+  border-radius: 2px;
+  margin: 1.25rem auto 0;
+}
+
+/* Introductory description */
+
+.wisdom-publications-header p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: var(--wisdom-text-lead);
+  line-height: 1.65;
+  color: #55585c;
+}
+
+/* Publication list */
+
+.wisdom-publications-list {
+  width: 100%;
+}
+
+/* Individual publication entry */
+
+.wisdom-publication-entry {
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e0d9;
+}
+
+.wisdom-publication-entry:first-child {
+  padding-top: 0;
+}
+
+/* WISDOM paper number / affiliated label */
+
+.wisdom-publication-number {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #a85c24;
+  margin-bottom: 0.75rem;
+}
+
+/* Paper title */
+
+.wisdom-publication-title {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #181c22;
+  margin-bottom: 1rem;
+}
+
+/* Authors and journal information */
+
+.wisdom-publication-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #55585c;
+  margin-bottom: 1rem;
+}
+
+.wisdom-publication-journal {
+  margin-left: 0.75rem;
+}
+
+/* View publication link */
+
+.wisdom-publication-link {
+  display: inline-block;
+  color: #a85c24;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wisdom-publication-link:hover,
+.wisdom-publication-link:focus-visible {
+  color: #854519;
+  text-decoration: underline;
+}
+
 /* ==========================================
    PUBLICATIONS ARCHIVE — MOBILE
    ========================================== */
 
 @media (max-width: 900px) {
 
-  .wisdom-publications-page { margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .wisdom-publications-page {
+    margin: 2rem auto 4rem;
+    padding: 0 1.25rem;
+  }
 
-  .wisdom-publications-header { margin-bottom: 3rem; }
+  .wisdom-publications-header {
+    margin-bottom: 3rem;
+  }
 
-  .wisdom-publication-title { font-size: 1.25rem; }
+  .wisdom-publication-title {
+    font-size: 1.25rem;
+  }
 
-  .wisdom-publication-entry { padding: 1.5rem 0; }
+  .wisdom-publication-entry {
+    padding: 1.5rem 0;
+  }
 
-  .wisdom-publication-journal { margin-left: 0; }
+  .wisdom-publication-journal {
+    margin-left: 0;
+  }
 }
+
 
