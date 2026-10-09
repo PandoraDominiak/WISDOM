@@ -158,7 +158,8 @@
 /* Main content container */
 
 .wisdom-publications-page {
-  max-width: 1100px;
+  width: 100%;
+  max-width: 1350px;
   margin: 3rem auto 6rem;
   padding: 0 2rem;
   box-sizing: border-box;
@@ -220,8 +221,9 @@
 /* WISDOM paper number / affiliated label */
 
 .wisdom-publication-number {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
   color: #a85c24;
   margin-bottom: 0.75rem;
 }
@@ -242,7 +244,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.4rem;
+  gap: 0.35rem;
   font-size: 1rem;
   line-height: 1.5;
   color: #55585c;
@@ -250,7 +252,7 @@
 }
 
 .wisdom-publication-journal {
-  margin-left: 0.75rem;
+  margin-left: 0;
 }
 
 /* View publication link */
@@ -414,6 +416,12 @@
   .wisdom-publication-journal {
     margin-left: 0;
   }
+}
+
+/* Hide duplicate theme title on Publications page */
+
+body:has(.wisdom-publications-page) .intro-title {
+  display: none;
 }
 
 
