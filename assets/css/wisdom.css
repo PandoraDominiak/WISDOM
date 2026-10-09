@@ -184,6 +184,7 @@ body:has(.wisdom-publications-page) .intro {
 /* Control spacing above the Publications heading */
 
 .wisdom-publications-header {
+  text-align: center;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
 }
