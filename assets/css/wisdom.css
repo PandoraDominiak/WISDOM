@@ -129,3 +129,23 @@
   display: inline-block;
   margin-top: 2rem;
 }
+
+/* Full-width neutral background for Our Science */
+
+.layout--home .wisdom-science {
+  position: relative;
+  isolation: isolate;
+  padding: 3rem 0;
+}
+
+.layout--home .wisdom-science::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #f8f8f7;
+  z-index: -1;
+}
