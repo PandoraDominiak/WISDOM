@@ -56,9 +56,11 @@ layout: default
     <section class="wisdom-paper-citation">
       <h2>Citation</h2>
     
-      <p class="wisdom-paper-full-authors">
-        {{ page.authors_full | replace: "; ", ", " }}
-      </p>
+      {% if page.authors_full %}
+        <p class="wisdom-paper-full-authors">
+          {{ page.authors_full }}
+        </p>
+      {% endif %}
     
       <p>
         {{ page.journal }}{% if page.volume %} {{ page.volume }}{% endif %}{% if page.publication_ref %}, {{ page.publication_ref }}{% endif %} ({{ page.year }})
