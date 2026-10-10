@@ -6,7 +6,7 @@ display_title: "Molecular gas measurement of the supermassive black hole mass of
 
 wisdom_number: "XXVIII"
 authors_short: "Dominiak et al."
-authors_full: "Dominiak, Pandora; Bureau, Martin; Liang, Fu-Heng; Cappellari, Michele; Davis, Timothy A.; Lelli, Federico; Ruffa, Ilaria; Williams, Thomas G.; Zhang, Hengyue"
+authors_full: "Pandora Dominiak, Martin Bureau, Fu-Heng Liang, Michele Cappellari, Timothy A. Davis, Federico Lelli, Ilaria Ruffa, Thomas G. Williams, Hengyue Zhang"
 year: 2026
 journal: "MNRAS"
 volume: "548"
