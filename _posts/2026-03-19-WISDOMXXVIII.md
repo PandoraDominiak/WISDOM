@@ -26,8 +26,8 @@ tags:
 
 <p>
 Supermassive black hole (SMBH) masses can be measured using molecular gas kinematics. Here we present high-angular-resolution
-(0.12 arcsec or \(\approx 11\) pc) Atacama Large Millimeter/submillimeter Array observations of the
-\(^{12}\mathrm{CO}(2\text{--}1)\) line emission of the early-type galaxy NGC 1387. The observations reveal a face-on, regularly
+(\0.12\ arcsec or \(\approx 11\) pc) Atacama Large Millimeter/submillimeter Array observations of the
+\(^{12}\mathrm{CO}(2--1)\) line emission of the early-type galaxy NGC 1387. The observations reveal a face-on, regularly
 rotating central molecular gas disc with a diameter of \(\approx 18\) arcsec (\(\approx 1.7\) kpc) and a central
 depression slightly larger than the SMBH sphere of influence. We forward model the CO data cube in a Bayesian framework with
 the <span class="small-caps">Kinematic Molecular Simulation</span> code, and use <em>Hubble Space Telescope</em> data to constrain
