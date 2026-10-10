@@ -12,22 +12,6 @@ layout: default
         {{ page.title }}
       </h1>
 
-      <div class="wisdom-paper-meta">
-        {% if page.authors_short %}
-          <span>{{ page.authors_short }}</span>
-        {% endif %}
-      
-        {% if page.year %}
-          <span>({{ page.year }})</span>
-        {% endif %}
-      
-        {% if page.journal %}
-          <span>
-            {{ page.journal }}{% if page.volume %} {{ page.volume }}{% endif %}{% if page.publication_ref %}, {{ page.publication_ref }}{% endif %}
-          </span>
-        {% endif %}
-      </div>
-
       <div class="wisdom-paper-actions">
 
         {% if page.ads_url %}
