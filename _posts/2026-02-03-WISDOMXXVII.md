@@ -32,7 +32,7 @@ Molecular gas is crucial to understanding star formation and galaxy evolution,
 but the giant molecular clouds (GMCs) of early-type galaxies (ETGs) have rarely
 been studied. Here, we present analyses of the spatially resolved GMCs of the
 lenticular galaxy NGC 1387, exploiting high spatial resolution
-(\(0.15\,\mathrm{arcsec}\) or \(14\,\mathrm{pc}\))
+(\(0.15\) arcsec or \(14\) pc)
 \(^{12}\mathrm{CO}(2-1)\) line observations from the
 Atacama Large Millimeter/submillimeter Array.
 We identify 1285 individual GMCs and measure the fundamental properties
