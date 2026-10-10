@@ -316,3 +316,132 @@ body:has(.wisdom-publications-page) .page-content > .inner {
 
 /* Hide the theme's redundant title but retain the banner. */
 body:has(.wisdom-publications-page) .intro-title { display: none; }
+
+
+/* ==========================================
+   INDIVIDUAL PUBLICATION PAGES
+   ========================================== */
+
+/* Main publication container */
+
+.wisdom-paper-page {
+  width: calc(100% - 4rem);
+  max-width: 1100px;
+  margin: 4rem auto 6rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Publication title */
+
+.wisdom-paper-title {
+  font-family: var(--wisdom-font);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--wisdom-text);
+  margin: 0 0 1.5rem;
+}
+
+/* Bibliographic information */
+
+.wisdom-paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.3rem;
+  row-gap: 0.25rem;
+  font-size: var(--wisdom-text-body);
+  line-height: 1.6;
+  color: var(--wisdom-heading-grey);
+  margin-bottom: 1.5rem;
+}
+
+/* ADS and arXiv buttons */
+
+.wisdom-paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.wisdom-paper-actions a {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  border-radius: 4px;
+  font-family: var(--wisdom-font);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Primary ADS button */
+
+.wisdom-paper-actions .data-release-button {
+  background: var(--wisdom-copper);
+  color: #ffffff;
+  border: 1px solid var(--wisdom-copper);
+}
+
+.wisdom-paper-actions .data-release-button:hover {
+  background: var(--wisdom-copper-hover);
+  border-color: var(--wisdom-copper-hover);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Secondary arXiv button */
+
+.wisdom-paper-secondary-button {
+  background: #ffffff;
+  color: var(--wisdom-copper);
+  border: 1px solid var(--wisdom-copper);
+}
+
+.wisdom-paper-secondary-button:hover {
+  background: var(--wisdom-copper);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Abstract and citation sections */
+.wisdom-paper-abstract,
+.wisdom-paper-citation { border-top: 1px solid #e5e0d9; padding-top: 2rem; margin-top: 2rem; }
+.wisdom-paper-abstract h2,
+.wisdom-paper-citation h2 { font-family: var(--wisdom-font); font-size: 1.5rem; font-weight: 700; line-height: 1.3; color: var(--wisdom-text); margin: 0 0 1.25rem; }
+
+/* Scientific abstract typography */
+.wisdom-paper-abstract { max-width: 950px; }
+.wisdom-paper-abstract p { font-family: var(--wisdom-font); font-size: 1.0625rem; line-height: 1.85; color: #30343a; margin: 0 0 1.5rem; }
+
+/* MNRAS-style small capitals */
+.wisdom-paper-abstract .small-caps { font-variant: small-caps; font-variant-caps: small-caps; }
+
+/* MathJax inline equations */
+.wisdom-paper-abstract mjx-container { font-size: 100% !important; }
+.wisdom-paper-abstract mjx-container[jax="CHTML"][display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+
+/* Full citation */
+.wisdom-paper-citation p { font-size: var(--wisdom-text-body); line-height: 1.7; color: var(--wisdom-heading-grey); margin: 0 0 0.75rem; }
+
+/* Back to publications */
+.wisdom-paper-back { display: inline-block; margin-top: 2.5rem; color: var(--wisdom-copper); font-size: 1rem; font-weight: 600; text-decoration: none; }
+.wisdom-paper-back:hover { color: var(--wisdom-copper-hover); text-decoration: underline; }
+
+/* ==========================================
+   INDIVIDUAL PUBLICATIONS — MOBILE
+   ========================================== */
+
+@media (max-width: 900px) {
+  .wisdom-paper-page { width: calc(100% - 2.5rem); margin: 2.5rem auto 4rem; }
+  .wisdom-paper-title { font-size: 1.6rem; }
+  .wisdom-paper-abstract p { font-size: 1rem; line-height: 1.75; }
+  .wisdom-paper-abstract h2,
+  .wisdom-paper-citation h2 { font-size: 1.35rem; }
+  .wisdom-paper-actions { margin-bottom: 2rem; }
+}
+
