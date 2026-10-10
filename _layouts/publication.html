@@ -16,11 +16,11 @@ layout: default
         {% if page.authors_short %}
           <span>{{ page.authors_short }}</span>
         {% endif %}
-
+      
         {% if page.year %}
           <span>({{ page.year }})</span>
         {% endif %}
-
+      
         {% if page.journal %}
           <span>
             {{ page.journal }}{% if page.volume %} {{ page.volume }}{% endif %}{% if page.publication_ref %}, {{ page.publication_ref }}{% endif %}
@@ -55,17 +55,12 @@ layout: default
 
     <section class="wisdom-paper-citation">
       <h2>Citation</h2>
-    
-      {% if page.authors_full %}
-        <p class="wisdom-paper-full-authors">
-          {{ page.authors_full }}
+      
+        <p>
+          {% if page.authors_full %}{{ page.authors_full }}.{% endif %}
+          {% if page.journal %}{{ page.journal }}{% endif %}{% if page.volume %} {{ page.volume }}{% endif %}{% if page.publication_ref %}, {{ page.publication_ref }}{% endif %}{% if page.year %} ({{ page.year }}){% endif %}
         </p>
-      {% endif %}
-    
-      <p>
-        {{ page.journal }}{% if page.volume %} {{ page.volume }}{% endif %}{% if page.publication_ref %}, {{ page.publication_ref }}{% endif %} ({{ page.year }})
-      </p>
-    </section>
+      </section>
 
     <a href="{{ '/papers/' | relative_url }}" class="wisdom-paper-back">
       &larr; Back to publications
