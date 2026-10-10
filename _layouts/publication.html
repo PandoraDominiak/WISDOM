@@ -1,0 +1,73 @@
+
+---
+layout: default
+---
+
+<main class="wisdom-paper-page">
+
+  <article class="wisdom-paper">
+
+    <header class="wisdom-paper-header">
+
+      <h1 class="wisdom-paper-title">
+        {{ page.title }}
+      </h1>
+
+      <div class="wisdom-paper-meta">
+        {% if page.authors_short %}
+          <span>{{ page.authors_short }}</span>
+        {% endif %}
+
+        {% if page.year %}
+          <span>({{ page.year }})</span>
+        {% endif %}
+
+        {% if page.journal %}
+          <span>
+            {{ page.journal }}{% if page.volume %} {{ page.volume }}{% endif %}{% if page.publication_ref %}, {{ page.publication_ref }}{% endif %}
+          </span>
+        {% endif %}
+      </div>
+
+      <div class="wisdom-paper-actions">
+
+        {% if page.ads_url %}
+          <a href="{{ page.ads_url }}" class="data-release-button"
+             target="_blank" rel="noopener noreferrer">
+            ADS &nearr;
+          </a>
+        {% endif %}
+
+        {% if page.arxiv_url %}
+          <a href="{{ page.arxiv_url }}" class="wisdom-paper-secondary-button"
+             target="_blank" rel="noopener noreferrer">
+            arXiv &nearr;
+          </a>
+        {% endif %}
+
+      </div>
+
+    </header>
+
+    <section class="wisdom-paper-abstract">
+      <h2>Abstract</h2>
+      {{ content }}
+    </section>
+
+    <section class="wisdom-paper-citation">
+      <h2>Citation</h2>
+
+      <p>
+        {{ page.authors_short }} ({{ page.year }}),
+        {{ page.journal }} {{ page.volume }},
+        {{ page.publication_ref }}
+      </p>
+    </section>
+
+    <a href="{{ '/papers/' | relative_url }}" class="wisdom-paper-back">
+      &larr; Back to publications
+    </a>
+
+  </article>
+
+</main>
